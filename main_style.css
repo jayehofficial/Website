@@ -43,7 +43,7 @@ h1 {
 
 .profile-image {
 	display: block;
-	width: min(280px, 70vw);
+	width: min(2800px, 70vw);
 	height: auto;
 	margin: 1.5rem auto;
 	border-radius: 20px;
