@@ -1,0 +1,92 @@
+@font-face {
+	font-family: "TVCD";
+	src: url("fonts/Tvcd-d92gK.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Cute Love";
+	src: url("fonts/CuteLove-JpLaa.otf") format("opentype");
+}
+
+
+body {
+	min-height: 100vh;
+	position: relative;
+	isolation: isolate;
+	background: #6b97c2;
+}
+
+body::before {
+	position: absolute;
+	z-index: -1;
+	 inset: -75%;
+	 border-radius: 50%;
+	 background:
+		radial-gradient(circle at center, transparent 0 18%, rgba(107, 151, 194, 0.4) 40%, transparent 70%),
+		conic-gradient(from 0deg at center, #6b97c2 0deg, #859bc9 72deg, #9fa0cf 144deg, #b9a4d6 216deg, #d3a8dc 288deg, #6b97c2 360deg);
+	 filter: blur(20px);
+	 content: "";
+	 pointer-events: none;
+	 animation: spiral-rotate 20s linear infinite;
+}
+
+@keyframes spiral-rotate {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+h1 {
+	text-align: center;
+	font-family: "TVCD", Futura, "Trebuchet MS", sans-serif;
+}
+
+.profile-image {
+	display: block;
+	width: min(280px, 70vw);
+	height: auto;
+	margin: 1.5rem auto;
+	border-radius: 20px;
+	box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+p {
+	padding: 1rem;
+	font-family: "Trebuchet MS", Georgia, serif;
+	font-weight: bold;
+}
+
+footer nav {
+	display: flex;
+	gap: 1.0rem;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+footer nav a {
+	padding: 0.6rem 1rem;
+	border-radius: 999px;
+	background-color: #d3a8dc;
+	color: #ffffff;
+	font-family: "Cute Love", cursive;
+	font-size: 1.5rem;
+	line-height: 1.2;
+	letter-spacing: 0.067rem;
+	text-decoration: none;
+	box-shadow: 10px 6px 14px rgba(0, 0, 0, 0.28);
+	transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+footer nav a:hover,
+footer nav a:focus-visible {
+	background-color: #88608f;
+	box-shadow: 10px 8px 18px rgba(0, 0, 0, 0.38);
+	transform: translateY(-2px);
+}
+
+/* IMAGINAL DISK COLOR PALETTE
+   Soft Blue: #6b97c2 
+	Periwinkle Blue: #859bc9
+   Lavender-Blue: #9fa0cf 
+   Light Orchid: #b9a4d6 
+   Pale Lilac: #d3a8dc */
